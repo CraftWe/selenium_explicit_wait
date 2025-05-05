@@ -47,18 +47,20 @@ The key aspect of this program is the use of 'WebDriverWait' to handle asynchron
 
 ## Code Explanation
 
-\* 'System.setProperty("webdriver.chrome.driver", "/*Local URL of the Web Driver*/");':  Configures the system property to specify the location of the ChromeDriver executable.  **Note:** You must replace '"/*Local URL of the Web Driver*/"' with the actual path to your ChromeDriver.
-\* 'ChromeOptions options = new ChromeOptions();':  Creates an instance of 'ChromeOptions' to configure the Chrome browser.  This example includes a commented-out line for running Chrome in headless mode.
-\* 'WebDriver driver = new ChromeDriver(options);':  Initializes a new ChromeDriver instance with the specified options.
-\* 'driver.get("https://www.google.com");':  Opens the Google homepage.
-\* 'driver.findElement(By.name("q"));':  Locates the search bar element using its name attribute.
-\* 'searchBar.sendKeys("java");':  Enters "java" into the search bar.
-\* 'searchBar.submit();':  Submits the search query.
-\* 'WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));':  Creates a 'WebDriverWait' instance with a timeout of 3 seconds.
-\* 'wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search")));':  Waits until the element with the ID "search" is visible.  This is the explicit wait, ensuring that the program waits for the search results to load.
-\* 'searchResults.findElements(By.tagName("a")).size();':  Finds all the anchor tags within the search results and prints the count.
-\* 'Thread.sleep(200);':  Pauses execution for 200 milliseconds.  \*Note: Explicit waits are generally preferred over Thread.sleep, as Thread.sleep is an unconditional wait.\*
-\* 'driver.quit();':  Closes the browser and terminates the WebDriver session in the 'finally' block.
+The 'ExplicitWait.java' file contains the following code:
+
+* **`System.setProperty("webdriver.chrome.driver", "/*Local URL of the Web Driver*/");`**: Configures the system property to specify the location of the ChromeDriver executable. **Note:** You must replace `"/*Local URL of the Web Driver*/"` with the actual path to your ChromeDriver.
+* **`ChromeOptions options = new ChromeOptions();`**: Creates an instance of `ChromeOptions` to configure the Chrome browser. This example includes a commented-out line for running Chrome in headless mode.
+* **`WebDriver driver = new ChromeDriver(options);`**: Initializes a new ChromeDriver instance with the specified options.
+* **`driver.get("https://www.google.com");`**: Opens the Google homepage.
+* **`driver.findElement(By.name("q"));`**: Locates the search bar element using its name attribute.
+* **`searchBar.sendKeys("java");`**: Enters "java" into the search bar.
+* **`searchBar.submit();`**: Submits the search query.
+* **`WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));`**: Creates a `WebDriverWait` instance with a timeout of 3 seconds.
+* **`wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search")));`**: Waits until the element with the ID "search" is visible. This is the explicit wait, ensuring that the program waits for the search results to load.
+* **`searchResults.findElements(By.tagName("a")).size();`**: Finds all the anchor tags within the search results and prints the count.
+* **`Thread.sleep(200);`**: Pauses execution for 200 milliseconds. *Note: Explicit waits are generally preferred over Thread.sleep, as Thread.sleep is an unconditional wait.*
+* **`driver.quit();`**: Closes the browser and terminates the WebDriver session in the `finally` block.
 
 ## Selenium Setup Guide
 
