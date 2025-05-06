@@ -29,7 +29,7 @@ The key aspect of this program is the use of 'WebDriverWait' to handle asynchron
 1.  **Prerequisites:**
     * Java Development Kit (JDK) installed.
     * Selenium WebDriver Java library added to the project.
-    * ChromeDriver installed and the system property 'webdriver.chrome.driver' set to the correct path.  See the '[Selenium Setup Guide](./docs/Selenium Setup Guide.pdf)' for detailed instructions.
+    * ChromeDriver installed and the system property 'webdriver.chrome.driver' set to the correct path.  See the [Selenium Setup Guide](./docs/Selenium_Setup_Guide.pdf) for detailed instructions.
 
 2.  **Compile the Java code:**
 
@@ -64,4 +64,4 @@ The 'ExplicitWait.java' file contains the following code:
 
 ## Selenium Setup Guide
 
-For a detailed guide on setting up Selenium WebDriver with Java, please refer to the '[Selenium Setup Guide](./docs/Selenium Setup Guide.pdf)'.
+For a detailed guide on setting up Selenium WebDriver with Java, please refer to the [Selenium Setup Guide](./docs/Selenium_Setup_Guide.pdf).
